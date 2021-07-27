@@ -11,5 +11,5 @@ class User < ApplicationRecord
 
   attachment :profile_image, destroy: false
 
-  validates :name, presence: true, length: { minimum: 2, maximum: 25 },uniqueness: true
+  validates :name, presence: true, length: { in: 2..25 }, uniqueness: true
 end
